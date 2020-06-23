@@ -1,7 +1,5 @@
-﻿namespace LiquidAPI.Hooks
-{
-    class ModLoaderMonoModHook
-    {
+﻿namespace LiquidAPI.Hooks {
+	class ModLoaderMonoModHook {
 
-    }
+	}
 }

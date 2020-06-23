@@ -1,11 +1,8 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 
-namespace LiquidAPI.Hooks
-{
-	internal static partial class LiquidHooks
-	{
-		public static void AddHooks()
-		{
+namespace LiquidAPI.Hooks {
+	internal static partial class LiquidHooks {
+		public static void AddHooks() {
 			// Update
 			On.Terraria.Liquid.Update += ModdedLiquidUpdate;
 
@@ -18,8 +15,8 @@ namespace LiquidAPI.Hooks
 
 			// Rendering
 			On.Terraria.Main.oldDrawWater += OldWaterDraw;
-		    On.Terraria.Main.DrawWater += Hooked_DrawWater;
-		    On.Terraria.Main.drawWaters += Hooked_drawWaters;
+			On.Terraria.Main.DrawWater += Hooked_DrawWater;
+			On.Terraria.Main.drawWaters += Hooked_drawWaters;
 
 
 			// Liquid Renderer
@@ -43,7 +40,7 @@ namespace LiquidAPI.Hooks
 				(orig, self) => LiquidRenderer.Instance.GetCachedDrawArea();
 
 			// TODO: WaterStyleLoader -> Resize Arrays hook needed for LiquidRenderer texture array (Might not be required if done on PostLoad)
-			// TODO: ModInternals -> SetupContent hook needed for LiquidRenderer texture array (Might not be required if done on PostLoad)	
+			// TODO: ModInternals -> SetupContent hook needed for LiquidRenderer texture array (Might not be required if done on PostLoad)
 		}
 	}
 }
